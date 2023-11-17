@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+* {
+  overflow-x: hidden;
+}
+
+.home-parent-container {
+  width: 100%;
+}
+
+.home-main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-why-is-it-important-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.home-main-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home-main-center-text button {
+  border-radius: 40px;
+  background: linear-gradient(0deg, #F79F2D 0%, #F79F2D 100%);
+  border: none;
+  stroke: none;
+  display: flex;
+  width: auto;
+  color: white;
+  font-size: 15px;
+  padding: 20px 30px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.home-main-center-text h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+
+.home-main-center-text h2 {
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: -20px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: red;
+}
+
+.home-what-do-we-do-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+
+.home-what-do-we-do-container h1 {
+  text-align: center;
+  font-family: Tiro Devanagari Hindi;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.home-what-do-we-do-container h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  width: 65%;
+  text-align: center;
+  margin: auto;
+}
+
+.home-what-do-we-do_sub-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.quarter {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quarter:hover {
+  background-color: #f0f0f0;
+}
+
+.quarter.expanded {
+  background-color: #e0e0e0;
+  font-size: 1.5rem;
+}
+
+.home-what-do-we-do_sub-container_info {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.home-what-do-we-do_sub-container_info span:first-child {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.home-what-do-we-do_sub-container_info span:nth-child(2) {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.home-what-do-we-do_sub-container_info button {
+  
+  padding: 14px 18px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: linear-gradient(0deg, #F79F2D 0%, #F79F2D 100%), linear-gradient(180deg, rgba(0, 101, 255, 0.00) 0%, #2684FF 100%), #4C9AFF;
+  border: none;
+  stroke: none;
+  color: #fff;
+  width: max-content;
+  margin-top: 10%;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.home-container-pink-clouds {
+  position: absolute;
+  z-index: -1;
+  margin-top: 15%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-why-is-it-important-container h1 {
+  text-align: center;
+  font-family: Tiro Devanagari Hindi;
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 2%;
+}
+
+.home-why-is-it-important-container_image {
+  width: 80vw;
+  height: 600px;
+  object-fit: contain;
+}
+
+.home-why-is-it-important-container__container-image {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.home-why-is-it-important-container__container-mission-vision {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.home-why-is-it-important-container__container-mission-vision div {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-why-is-it-important-container__container-mission-vision h3 {
+  width: 50%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.important-rectangle-line {
+  min-width: 10px;
+  /* Set your desired minimum width here */
+  height: 30vh;
+  position: absolute;
+  background-color: #F79F2D;
+  margin: 0;
+  padding: 0;
+  right: 5%;
+  transform: translate(-100%, -110%);
+}
+
+.important-rectangle-line-2 {
+  min-width: 10px;
+  /* Set your desired minimum width here */
+  height: 30vh;
+  position: absolute;
+  background-color: #F79F2D;
+  margin: 0;
+  padding: 0;
+  right: 5%;
+  transform: translate(-1500%, -62%) rotate(90deg);
+}
+
+.home-partners-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.home-partners-container h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 8%;
+  font-family: Tiro Devanagari Hindi;
+  font-size: 50px;
+  font-weight: 400;
+}

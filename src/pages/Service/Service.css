@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+.service-container {
+    padding: 20px;
+}
+
+.service-container__header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-container__header-svg1 {
+    position:absolute;
+    z-index: -1;
+    left: 0;
+}
+
+.service-container__header-svg2 {
+    position:absolute;
+    z-index: -1;
+    right: 0;
+    top: 10%;
+}
+
+.service-container__header_img1 {
+}
+
+.service-container__header_img2 {
+    position: absolute;   
+    top: 14%;
+    right: 10%; 
+}
+.service-container__header_img3 {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+}
+
+.service-container__header_img-container {
+    border: 4px solid #F79F2D;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-top: 5%;
+    padding: 20px;
+}
+
+.service-container__header h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    width: 40%;
+}
+
+.service-container__body h1 {
+    text-align: center;
+    font-family: Tiro Devanagari Hindi;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5%;
+}
+
+.service-container__body-item {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+.service-container__body-text-container {
+    width: 60%;
+}
+
+.service-container__body-text-container p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.service-container__body-text-container span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.service-container__body-fact {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    width: 60%;
+}
+.service-container__barchart {
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.contact-container__form-container h1 {
+    font-size: 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+.contact-us_form input {
+    border-radius: 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid #808080;
+}
+
+
+.contact-us_form input:nth-child(2) {
+    margin-left: 1rem;
+}
+
+.contact-us_form select {
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid #808080;
+    margin-top: 1rem;
+}
+
+.contact-us_form textarea {
+    width: 96%;
+    border-radius: 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid #808080;
+    margin-top: 1rem;
+}
+
+.contact-us_form button {
+    padding: 14px 18px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, #F79F2D 0%, #F79F2D 100%), linear-gradient(180deg, rgba(0, 101, 255, 0.00) 0%, #2684FF 100%), #4C9AFF;
+    border: none;
+    stroke: none;
+    color: #fff;
+    width: max-content;
+    margin-top: 5%;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    font-size: 24px;
+}
