@@ -20,7 +20,7 @@ const Contact = () => {
 
         {/* Form */}
         <form className='contact-us_form' action="https://formspree.io/f/mpzgejdg" method="POST">
-          <div style={{display:'flex'}}>
+          <div className='row'>
             <input type="text" id="name" name="name" placeholder='Your Name'/>
             <input type="email" id="email" name="email" placeholder='Email'/>
           </div>
