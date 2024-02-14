@@ -73,3 +73,15 @@
     margin-top: 10px;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction:column ;
+        height: auto;
+    }
+    .footer-container-row {
+      margin: -20;
+      padding: 0;
+    }
+}

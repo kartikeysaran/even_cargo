@@ -95,24 +95,12 @@ const Home = () => {
         </svg>
         <h1>What do we do ?</h1>
         <h4>We are India’s first women-driven logistics company focusing on creating equal work opportunities for women. By partnering with major e-commerce companies in the nation, we aim to provide dignified employment to women from resource-poor communities.</h4>
-        <div className='home-what-do-we-do_sub-container'>
-          {/* <div className='home-what-do-we-do_sub-container_ellipse'>
-            {quarters.map((quarter) => (
-              <div
-                key={quarter.id}
-                className={`quarter ${selectedQuarter === quarter.id ? 'expanded' : ''}`}
-                onClick={() => handleQuarterClick(quarter.id)}
-              >
-                {quarter.name}
-              </div>
-            ))}
-          </div> */}        
+        <div className='home-what-do-we-do_sub-container'>    
           <CircleComponent componentClicked={handleQuartleCircleClicked}/>    
           {selectedQuarter !== null && (
             <div className='home-what-do-we-do_sub-container_info'>
               <span>{quarters[selectedQuarter - 1].name}</span>
               <span>{quarters[selectedQuarter - 1].info}</span>
-              {/*On Click of this goto /AboutUs*/}
               <button >Read More <FaArrowRight /></button>
             </div>
           )}
