@@ -1,18 +1,22 @@
 import React , {useState} from 'react'
 import './Home.css'
 import { IoCloseCircle } from "react-icons/io5";
-import { FaArrowCircleRight, FaArrowRight, FaArrowCircleLeft} from "react-icons/fa";
-import Important1 from '../../assets/important-1.jpeg';
-import Important2 from '../../assets/important-2.png';
-import Important3 from '../../assets/important-3.png' ;
+import { FaArrowRight } from "react-icons/fa";
+// import Important1 from '../../assets/important-1.jpeg';
+// import Important2 from '../../assets/important-2.png';
+// import Important3 from '../../assets/important-3.png' ;
 import IndianMap from '../../assets/indian_map.png';
-import Partners from '../../assets/partners.png';
+import partnerBusiness from '../../assets/partner/business.png';
+import partnerKnowledge from '../../assets/partner/knowledge.png';
+import partnerFunding from '../../assets/partner/funding.png';
+import partnerResource from '../../assets/partner/resoure.png';
 import CircleComponent from '../../components/Circle/Circle';
-
+import { useNavigate } from "react-router-dom"; 
 
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
   const quarters = [
     { id: 1, name: 'Mobilization', info: 'Our priority is to identify and mobilize women belonging to resource-poor communities. There is enough evidence that points...' },
@@ -21,28 +25,41 @@ const Home = () => {
     { id: 4, name: 'Retention', info: 'Women face immense challenges from different fronts - the family, the community, and the delivery hubs. As it will still take us a long time to bring definitive change in the mindsets around “gender-specific” jobs...' },
   ];
 
-  const slides = [
-    {
-      image:Important1
-    },
-    {
-      image:Important2
-    },
-    {
-      image:Important3
-    },
-  ];
+  const facts = [
+    { id: 1, title: "Girls trained on mobility", count: "100"},
+    { id: 2, title: "Girls trained on self defence", count: "100"},
+    { id: 3, title: "Dignified livelihood generated", count: "100"},
+  ]
 
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const partners = [
+    {id: 1, type: "Business Partner", img: partnerBusiness},
+    {id: 2, type: "Funding Partner", img: partnerFunding},
+    {id: 3, type: "Knowledge Partner", img: partnerKnowledge},
+    {id: 4, type: "Resource Partner", img: partnerResource}
+  ]
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  // const slides = [
+  //   {
+  //     image:Important1
+  //   },
+  //   {
+  //     image:Important2
+  //   },
+  //   {
+  //     image:Important3
+  //   },
+  // ];
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+  // const [current, setCurrent] = useState(0);
+  // const length = slides.length;
+
+  // const nextSlide = () => {
+  //   setCurrent(current === length - 1 ? 0 : current + 1);
+  // };
+
+  // const prevSlide = () => {
+  //   setCurrent(current === 0 ? length - 1 : current - 1);
+  // };
 
   const [selectedQuarter, setSelectedQuarter] = useState(1);
 
@@ -62,6 +79,11 @@ const Home = () => {
   const closePopup = () => {
     setShowPopup(false);
   };
+
+  const handleReadMore = () => {
+    navigate('/service');
+  };
+
   return (
     <div className='home-parent-container'>
       <div className='home-main-container'>
@@ -101,28 +123,9 @@ const Home = () => {
             <div className='home-what-do-we-do_sub-container_info'>
               <span>{quarters[selectedQuarter - 1].name}</span>
               <span>{quarters[selectedQuarter - 1].info}</span>
-              <button >Read More <FaArrowRight /></button>
+              <button onClick={handleReadMore}>Read More <FaArrowRight /></button>
             </div>
           )}
-        </div>
-      </div>
-      <div className='home-why-is-it-important-container'>
-        <h1>Why it is important ?</h1>
-        <div className='home-why-is-it-important-container__container-image'>
-          <FaArrowCircleLeft onClick={prevSlide} style={{cursor:'pointer'}}/>
-          {slides.map((slide, index) => {
-            return (
-              <div
-                className={index === current ? 'slide active' : 'slide'}
-                key={index}
-              >
-                {index === current && (
-                  <img src={slide.image} alt='travelimg' className='home-why-is-it-important-container_image' />
-                )}
-              </div>
-            );
-          })}
-          <FaArrowCircleRight onClick={nextSlide} style={{cursor:'pointer'}}/>
         </div>
         <div className='home-why-is-it-important-container__container-mission-vision'>
             <div>
@@ -148,18 +151,82 @@ const Home = () => {
             <h1>Vision</h1>
             <h3>To build an inclusive society by creating equal livelihood opportunities for women.</h3>
             </div>
-        </div>
-        <div className='important-rectangle-line'/>
+        </div>    
+      </div>
+      <div className='important-rectangle-line'/>
         <div className='important-rectangle-line-2'/>
+        <br/>
+      <div className='home-why-is-it-important-container'>
+        <h1>Why it is important ?</h1>
+        {/* <div className='home-why-is-it-important-container__container-image'>
+          <FaArrowCircleLeft onClick={prevSlide} style={{cursor:'pointer'}}/>
+          {slides.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? 'slide active' : 'slide'}
+                key={index}
+              >
+                {index === current && (
+                  <img src={slide.image} alt='travelimg' className='home-why-is-it-important-container_image' />
+                )}
+              </div>
+            );
+          })}
+          <FaArrowCircleRight onClick={nextSlide} style={{cursor:'pointer'}}/>
+        </div> */}
+        <div className='home-why-is-it-important-container__container-image'>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center'}}>
+          <img width="100" height="100" src="https://img.icons8.com/ios/100/weight-care.png" alt="weight-care"/>
+            <h3>Equitable<br/> Society</h3>
+          </div>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center'}}>
+            <h3>More Labourforce<br/> Participation</h3>
+            <img width="100" height="100" src="https://img.icons8.com/ios/100/strength.png" alt="strength"/>
+          </div>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center'}}>
+          <img width="100" height="100" src="https://img.icons8.com/ios/100/good-quality--v1.png" alt="good-quality--v1"/>
+            <h3>Sustainable <br/>livelihood</h3>
+          </div>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center'}}>
+            <h3>Financial <br/>Independence</h3>
+            <img width="100" height="100" src="https://img.icons8.com/external-itim2101-lineal-itim2101/100/external-Financial-Freedom-business-and-financial-itim2101-lineal-itim2101.png" alt="external-Financial-Freedom-business-and-financial-itim2101-lineal-itim2101"/>
+           </div>
+        </div>
+
+        <div className='home-facts-outer'>
+          {facts.map((fact, index) => (
+            <div key={fact.id} className='home-facts-card'>
+              <h3 className='home-facts-count-span'>{fact.count}+</h3>
+              <h3 className='home-facts-title-span'>{fact.title}</h3>
+            </div>
+          ))}
+        </div>
       </div>
       <div className='home-partners-container'>
-        <img src={IndianMap} alt='indian-map'/>
+        <img style={{background:'rgba(255, 255, 255, 0.8)', height:'100%'}} src={IndianMap} alt='indian-map'/>
         <div>
-          <h1>Our Partners</h1>
-          <img src={Partners} alt='partners'/>
+          {/* <h1>Our Partners</h1>
+          <img src='' alt='partners' style={{ transform: 'scaleX(-1)' }}/> */}
         </div>
       {/* <LocationMap/> */}
-          
+      </div>
+      <div className='home-our-partners-container'>
+        <h1>Our Partners</h1>
+        <div className='home-our-partners-container-outer'>
+          {
+            partners.map((partner, index) =>(
+              <>
+              <div key={partner.id} className='home-our-partners-container-box'>
+                <p className='home-our-partners-container-p'>{partner.type}</p>
+                <img className='home-our-partners-container-img' src={partner.img}  alt='partner-img'/>  
+              </div>
+              {index !== partners.length - 1 && (
+                <div className='home-our-partners-sep'></div> 
+              )}
+              </>
+            ))
+          }
+        </div>
       </div>
       
     </div>

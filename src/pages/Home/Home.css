@@ -98,7 +98,7 @@
 
 .home-what-do-we-do_sub-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -189,7 +189,6 @@
 .home-why-is-it-important-container__container-mission-vision {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5%;
 }
 
 .home-why-is-it-important-container__container-mission-vision div {
@@ -236,15 +235,80 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 5%;
+  background-image: url("https://www.dbs.com/documents/portlet_file_entry/297834311/article181-main.jpg/3b7279a2-7740-8658-5c49-c0de33559859");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  padding: 2%;
 }
 
-.home-partners-container h1 {
+.home-our-partners-container {
+  margin-top: 5rem;
+}
+
+.home-our-partners-container-outer{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: -5%;
+}
+
+.home-our-partners-sep {
+  width: 1px;
+  background-color: #F79F2D;
+}
+
+.home-our-partners-container-p {
+  font-size: x-large;
+  font-weight: 200;
+}
+
+.home-our-partners-container-img {
+  max-width: 100%; 
+  max-height: 100%; 
+  width: auto;
+  height: auto; 
+}
+
+.home-our-partners-container-box {
+  margin: 1rem;
+}
+
+.home-our-partners-container h1 {
   margin: auto;
   text-align: center;
   margin-bottom: 8%;
   font-family: Tiro Devanagari Hindi;
   font-size: 50px;
   font-weight: 400;
+}
+
+.home-facts-outer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 2%;
+  margin-top: 1rem;
+}
+
+.home-facts-card {
+  border-radius: 10px;
+  padding: 2%;
+  background-color: #1353a7;
+}
+
+.home-facts-title-span {
+  font-size: x-large;
+  font-weight: 400;
+  color: #fff;
+}
+
+.home-facts-count-span {
+  font-size: x-large;
+  font-weight: 700;
+  color: #ffc508;
 }
 
 @media (max-width: 768px) {
@@ -290,5 +354,15 @@
     max-width: 100%;
     height: auto;
     padding: 10px;
+  }
+  .home-why-is-it-important-container__container-image {
+    flex-direction: column;
+  }
+  .home-facts-outer {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .home-our-partners-container-outer {
+    flex-direction: column;
   }
 }

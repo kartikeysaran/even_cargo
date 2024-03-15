@@ -56,9 +56,9 @@ const Service = () => {
         </div>
       </div>
       <div className='service-container__body'>
-        <h1>Discover the Key Features</h1>
+        <h1 id='service-title_Discover'>Discover the Key Features</h1>
         {keyFeatures.slice(0, 2).map((feature, index) => (
-          <div className="service-container__body-item" key={index}>
+          <div className="service-container__body-item" key={index} id={`quarter${index + 1}Scroll`}>
             <div className="service-container__body-text-container">
               <span>{feature.title}</span>
               <p>{feature.details}</p>
@@ -70,7 +70,7 @@ const Service = () => {
         ))}
         <div className='service-container__body-fact'>700+ women trained</div>
         {keyFeatures.slice(2, 3).map((feature, index) => (
-          <div className="service-container__body-item" key={index}>
+          <div className="service-container__body-item" key={index} id={`quarter${index + 1}Scroll`}>
             <div className="service-container__body-text-container">
               <span>{feature.title}</span>
               <p>{feature.details}</p>
