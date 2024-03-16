@@ -6,13 +6,14 @@ import Important1 from '../../assets/important-1.jpeg';
 import Important2 from '../../assets/important-2.png';
 import Important3 from '../../assets/important-3.png' ;
 import IndianMap from '../../assets/indian_map.png';
+import Popup from '../../assets/popup.png';
 import Partners from '../../assets/partners.png';
 import CircleComponent from '../../components/Circle/Circle';
 
 
 
 const Home = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
 
   const quarters = [
     { id: 1, name: 'Mobilization', info: 'Our priority is to identify and mobilize women belonging to resource-poor communities. There is enough evidence that points...' },
@@ -76,16 +77,15 @@ const Home = () => {
             <button className="close-button" onClick={closePopup}>
               <IoCloseCircle />
             </button>
-
-            <iframe
-              title="YouTube Video"
-              width="1200"
-              height="800"
-              style={{ padding: '10px' }}
-              src="https://www.youtube.com/embed/WzS-nYVRJmw"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
+            <div className="popup-content">
+      <img src= {Popup} alt="Popup" className="popup-image"/>
+      <div className="popup-text1">
+        <h4>Is it possible to achieve gender equity within our lifetime?</h4>
+      </div>
+      <div className="popup-text2">
+        <h3>Willing to join us?</h3>
+      </div>
+    </div>
           </div>
         )}
       </div>
