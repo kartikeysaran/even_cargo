@@ -12,6 +12,7 @@ import partnerFunding from '../../assets/partner/funding.png';
 import partnerResource from '../../assets/partner/resoure.png';
 import CircleComponent from '../../components/Circle/Circle';
 import { useNavigate } from "react-router-dom"; 
+import BlogCarousel from '../../components/BlogCarousel/BlogCarousel';
 
 
 const Home = () => {
@@ -26,9 +27,9 @@ const Home = () => {
   ];
 
   const facts = [
-    { id: 1, title: "Girls trained on mobility", count: "100"},
-    { id: 2, title: "Girls trained on self defence", count: "100"},
-    { id: 3, title: "Dignified livelihood generated", count: "100"},
+    { id: 1, title: "Girls trained on mobility", count: "2000"},
+    { id: 2, title: "Girls trained on self defence", count: "1500"},
+    { id: 3, title: "Dignified livelihood generated", count: "600"},
   ]
 
   const partners = [
@@ -210,6 +211,13 @@ const Home = () => {
         </div>
       {/* <LocationMap/> */}
       </div>
+      <div className='home-our-partners-container'>
+        <h1>See who is talking about us</h1>
+        <div className='home-our-partners-container-outer'>
+          <BlogCarousel/>
+        </div>
+      </div>
+
       <div className='home-our-partners-container'>
         <h1>Our Partners</h1>
         <div className='home-our-partners-container-outer'>
