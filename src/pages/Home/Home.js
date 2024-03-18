@@ -13,6 +13,7 @@ import partnerResource from '../../assets/partner/resoure.png';
 import CircleComponent from '../../components/Circle/Circle';
 import { useNavigate } from "react-router-dom"; 
 import BlogCarousel from '../../components/BlogCarousel/BlogCarousel';
+import a from '../../assets/video/delivering-happiness.mp4'
 
 
 const Home = () => {
@@ -88,6 +89,10 @@ const Home = () => {
   return (
     <div className='home-parent-container'>
       <div className='home-main-container'>
+      <video autoPlay muted loop>
+        <source src={a} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
         <div className='home-main-center-text'>
           <h1>Equality Delivered</h1>
           <h2>At your doorsteps</h2>

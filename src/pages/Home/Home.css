@@ -13,6 +13,16 @@
   height: 100vh;
 }
 
+.home-main-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .home-why-is-it-important-container {
   width: 100%;
   padding: 20px;
@@ -24,6 +34,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
 }
 
 .home-main-center-text button {
@@ -158,7 +169,7 @@
 
 .home-container-pink-clouds {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   margin-top: 15%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
