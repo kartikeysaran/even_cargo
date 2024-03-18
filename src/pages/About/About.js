@@ -3,9 +3,13 @@ import './About.css'
 import { FaArrowRight } from "react-icons/fa";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import hiba from '../../assets/team/hiba.png'
-import priyanka from '../../assets/team/priyanka.png'
+import labiba from '../../assets/team/labiba.jpg'
+import priyanka from '../../assets/team/priyanka.jpg'
 import yogesh from '../../assets/team/yogesh.png'
+import shivani from '../../assets/team/shivani.jpg'
+import srishti from '../../assets/team/srishti.jpg'
+import mubeena from '../../assets/team/mubeena.jpg'
+
 import satyajit from '../../assets/mentors/satyajit.png'
 import karen from '../../assets/mentors/karen.png'
 import sudarshan from '../../assets/mentors/sudarshan.png'
@@ -42,20 +46,35 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'Yogesh Kumar',
-      img: yogesh,
-      position: 'Cheif Executive Officer',
-    },
-    {
       name: 'Priyanka Yadav',
       img: priyanka,
       position: 'Operations-Manager',
     },
     {
-      name: 'Hiba Malik',
-      img: hiba,
-      position: 'Community Engagement Lead',
-    }
+      name: 'Srishti Prateek',
+      img: srishti,
+      position: 'Business research (finances)',
+    },
+    {
+      name: 'Labiba Sadiq',
+      img: labiba,
+      position: 'Human Resources',
+    },
+    {
+      name: 'Shivani Attri',
+      img: shivani,
+      position: 'Community engagement & partnership',
+    },
+    {
+      name: 'Mubeena Hussain',
+      img: mubeena,
+      position: 'Business research (policies)',
+    },
+    {
+      name: 'Yogesh Kumar',
+      img: yogesh,
+      position: 'Cheif Executive Officer',
+    },
   ]
 
   const mentors = [
@@ -134,7 +153,16 @@ const About = () => {
       </svg>
       <h2>Our Team</h2>
       <div className="team-container">
-        {teamMembers.map((member, index) => (
+        {teamMembers.slice(0, 4).map((member, index) => (
+          <div key={index} className="team-member-card">
+            <img src={member.img} alt={member.name} className="team-member-image" />
+            <h4 className="team-member-name">{member.name}</h4>
+            <p className="team-member-position">{member.position}</p>
+          </div>
+        ))}
+      </div>
+      <div className="team-container">
+        {teamMembers.slice(4, 6).map((member, index) => (
           <div key={index} className="team-member-card">
             <img src={member.img} alt={member.name} className="team-member-image" />
             <h4 className="team-member-name">{member.name}</h4>
