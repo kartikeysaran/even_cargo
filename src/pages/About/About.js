@@ -73,7 +73,7 @@ const About = () => {
     {
       name: 'Yogesh Kumar',
       img: yogesh,
-      position: 'Cheif Executive Officer',
+      position: 'Strategy & Operations',
     },
   ]
 
