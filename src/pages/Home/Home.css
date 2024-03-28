@@ -32,9 +32,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  /* transform: translate(-50%, -50%);*/
+  text-align: center; 
   color: white;
+  animation: slideIn 1s ease forwards;
 }
 
 .home-main-center-text button {
@@ -66,10 +67,14 @@
 
 .popup {
   position: fixed;
+  width: 50dvw;
+  height: 60dvh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -89,6 +94,11 @@
 .home-what-do-we-do-container {
   width: 100%;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #F79F2D 0%, #F79F2D 40%, #3375CF 40%, #3375CF 100%);
+  animation: slideIn2 1s ease forwards;
 }
 
 .home-what-do-we-do-container h1 {
@@ -375,5 +385,37 @@
   }
   .home-our-partners-container-outer {
     flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20%) translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideIn2 {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -1,8 +1,13 @@
 nav {
-  padding: 20px;
   display: flex;
+  padding: 20px;
   justify-content: space-between;
   align-items: center;
+  position: fixed; 
+  width: 100%; 
+  right: 5px;
+  z-index: 1000;
+  background-color:  rgba(131, 131, 131, 0.5);
 }
 
 .left {
@@ -19,15 +24,17 @@ nav {
 }
 
 .right a {
-  color: black;
-  font-size: 20px;
+  color: #F79F2D;
+  font-size: x-large;
   text-decoration: none;
   margin: 0 15px;
   font-weight: 500;
+  -webkit-text-stroke: 0.1px #774100
 }
 
 .right a:hover {
   font-weight: 700;
+  color: #0f73ff;
 }
 
 .menu-icon {
