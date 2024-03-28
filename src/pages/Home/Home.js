@@ -1,7 +1,6 @@
 import React , {useState} from 'react'
 import './Home.css'
 import { IoCloseCircle } from "react-icons/io5";
-import { FaArrowRight } from "react-icons/fa";
 // import Important1 from '../../assets/important-1.jpeg';
 // import Important2 from '../../assets/important-2.png';
 // import Important3 from '../../assets/important-3.png' ;
@@ -10,8 +9,6 @@ import partnerBusiness from '../../assets/partner/business.png';
 import partnerKnowledge from '../../assets/partner/knowledge.png';
 import partnerFunding from '../../assets/partner/funding.png';
 import partnerResource from '../../assets/partner/resoure.png';
-import CircleComponent from '../../components/Circle/Circle';
-import { useNavigate } from "react-router-dom"; 
 import BlogCarousel from '../../components/BlogCarousel/BlogCarousel';
 import a from '../../assets/video/delivering-happiness.mp4'
 import deliveryTeam from '../../assets/image/delivery-team.jpg'
@@ -20,12 +17,12 @@ import deliveryTeam from '../../assets/image/delivery-team.jpg'
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-  const quarters = [
-    { id: 1, name: 'Mobilization', info: 'Our priority is to identify and mobilize women belonging to resource-poor communities. There is enough evidence that points...' },
-    { id: 2, name: 'Training', info: 'After identifying our batch of women, the training team provides extensive training that focuses on learning about logistics, two-wheeler driving, self-defense and soft-skill development...' },
-    { id: 3, name: 'Employment', info: 'Trainees are employed with our e-commerce and logistics partners. We ensure that our delivery associates are employed at hubs that are close to their homes, and are given an assured sum of load on routes that are safe...' },
-    { id: 4, name: 'Retention', info: 'Women face immense challenges from different fronts - the family, the community, and the delivery hubs. As it will still take us a long time to bring definitive change in the mindsets around “gender-specific” jobs...' },
-  ];
+  // const quarters = [
+  //   { id: 1, name: 'Mobilization', info: 'Our priority is to identify and mobilize women belonging to resource-poor communities. There is enough evidence that points...' },
+  //   { id: 2, name: 'Training', info: 'After identifying our batch of women, the training team provides extensive training that focuses on learning about logistics, two-wheeler driving, self-defense and soft-skill development...' },
+  //   { id: 3, name: 'Employment', info: 'Trainees are employed with our e-commerce and logistics partners. We ensure that our delivery associates are employed at hubs that are close to their homes, and are given an assured sum of load on routes that are safe...' },
+  //   { id: 4, name: 'Retention', info: 'Women face immense challenges from different fronts - the family, the community, and the delivery hubs. As it will still take us a long time to bring definitive change in the mindsets around “gender-specific” jobs...' },
+  // ];
 
   const facts = [
     { id: 1, title: "Girls trained on mobility", count: "2000"},
@@ -40,24 +37,24 @@ const Home = () => {
     {id: 4, type: "Resource Partner", img: partnerResource}
   ];
 
-  const [selectedQuarter, setSelectedQuarter] = useState(1);
+  //const [selectedQuarter, setSelectedQuarter] = useState(1);
 
-  const handleQuarterClick = (quarterId) => {
-    setSelectedQuarter(quarterId);
-  };
+  // const handleQuarterClick = (quarterId) => {
+  //   setSelectedQuarter(quarterId);
+  // };
 
-  const handleQuartleCircleClicked = (section) => {
-    console.log(`Clicked ${(section/90)+1}`)
-    handleQuarterClick((section/90)+1);
-  };
+  // const handleQuartleCircleClicked = (section) => {
+  //   console.log(`Clicked ${(section/90)+1}`)
+  //   handleQuarterClick((section/90)+1);
+  // };
 
-  const openPopup = () => {
-    setShowPopup(true);
-  };
+  // const openPopup = () => {
+  //   setShowPopup(true);
+  // };
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  // const closePopup = () => {
+  //   setShowPopup(false);
+  // };
 
   return (
     <div className='home-parent-container'>
