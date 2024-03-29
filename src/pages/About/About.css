@@ -26,11 +26,11 @@
     background: transparent;
     border-radius: 20px;
     border: 5px solid #F79F2D;
-    width: 30vw;
-    height: 25vh;
+    width: 25dvw;
+    height: 80px;
     position: absolute;
     top: 11%;
-    right: 25%;
+    right: 29%;
     z-index: -1;
 }
 
@@ -102,18 +102,17 @@
     justify-content: space-evenly;
   }
   
-  
-  
   .team-member-card {
     text-align: center;
     margin: 20px;
   }
   
   .team-member-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
   .team-member-name {
@@ -127,10 +126,12 @@
   .team-member-position {
     font-size: 18px;
     font-weight: 200;
+    text-align: center;
+    width: 200px;
   }
 
   .mentor-about {
-    width: 30vw;
+    width: 300px;
     padding: 10px;
   }
 
