@@ -73,18 +73,14 @@ const BlogCarousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     beforeChange: (current, next) => setCurrentIndex(next+1),
+    pauseOnHover: false
   };
 
   return (
     <div className="carousel-container">
       <Slider {...settings}>
-        {/* {Array.from(Array(10).keys()).map((index) => (
-          <div key={index} className={index === currentIndex ? 'active-slide' : 'carousel-slide'}>
-            <h3>Slide {index + 1}</h3>
-          </div>
-        ))} */}
         {blogs.map((blog, index) => (
-          <div key={index} className={index === currentIndex ? 'active-slide' : 'carousel-slide'}>
+          <div key={index} className={index === currentIndex || (index === 0 && currentIndex === blogs.length) ? 'active-slide' : 'carousel-slide'}>
             <a href={blog.link} target="_blank" rel="noopener noreferrer">
               <img src={blog.image} alt={`Blog ${index + 1}`} />
               <h4>{blog.headline}</h4>
