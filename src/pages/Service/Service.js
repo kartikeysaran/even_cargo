@@ -51,8 +51,8 @@ const Service = () => {
         <h3>It is possible to achieve gender equity within our lifetime.</h3>
         <div className='service-container__header_img-container'>
           <img src={Service1} alt='Service1' className='service-container__header_img1' />
-          <img src={Service2} alt='Service2' className='service-container__header_img2' />
-          <img src={Service3} alt='Service3' className='service-container__header_img3' />
+          {/* <img src={Service2} alt='Service2' className='service-container__header_img2' />
+          <img src={Service3} alt='Service3' className='service-container__header_img3' /> */}
         </div>
       </div>
       <div className='service-container__body'>

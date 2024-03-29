@@ -1,5 +1,6 @@
 .blog-container {
     padding: 2rem;
+    margin-top: 60px;
 }
 
 .blog-container h1 {
@@ -11,11 +12,11 @@
     overflow: hidden;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2rem;
     padding: 1rem;
-    border: 1px solid #000;
     border-radius: 20px;
     text-decoration: none;
+    width: 80%;
+    margin: auto;
 }
 
 .blog-container h2 {
@@ -31,11 +32,11 @@
 }
 
 .blog-container img {
-    width: 40vw;
-    height: 40vh;
+    width: 30vw;
+    height: 30vh;
     object-fit: cover;
-    border: 0.5px solid #808080;
     border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) { 

@@ -101,9 +101,223 @@
   animation: slideIn2 1s ease forwards;
 }
 
+.home-what-do-we-do-container-2 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.home-what-do-we-do-container-2-mission::before {
+  content: '';
+  background-image: url('../../assets/image/mission.png');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.home-what-do-we-do-container-2-mission::after {
+  content: '';
+  background-color: rgba(236, 154, 0, 0.4); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+.home-what-do-we-do-container-2-vision::before {
+  content: '';
+  background-image: url('../../assets/image/vision.png');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.home-what-do-we-do-container-2-vision::after {
+  content: '';
+  background-color: rgba(22, 127, 247, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+.home-what-do-we-do-container-2-vision,
+.home-what-do-we-do-container-2-mission {
+  color: white;
+  position: relative; 
+  animation: slideIn2 1s ease forwards;
+  width: 100%;
+  margin: 2rem;
+  flex: 1;
+  padding: 40px;
+}
+.home-what-do-we-do-container-2-vision h2 {
+  text-align: start;
+  background-color: #3375CF;
+  width: min-content;
+  padding-left: 10px;
+  padding-right: 40px;
+  border-radius: 0 40px 40px 0 ;
+}
+
+.home-what-do-we-do-container-2-vision span {
+  text-align: start;
+  background-color: #3375CF;
+}
+
+.home-what-do-we-do-container-2-mission span {
+  text-align: start;
+  background-color: #F79F2D;
+  padding: 10px;
+}
+
+.home-what-do-we-do-container-2-mission {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.home-what-do-we-do-container-2-mission h2 {
+  text-align: end;
+  background-color: #F79F2D;
+  padding-left: 40px;
+  padding-right: 10px;
+  width: min-content;
+  border-radius: 40px 0 0 40px ;
+}
+
+.home-what-do-we-do-container-2-vision h2 ,
+.home-what-do-we-do-container-2-mission h2{
+  position: relative;
+  z-index: 1;
+}
+
+.home-what-do-we-do-container-2-vision span,
+.home-what-do-we-do-container-2-mission span{
+  position: relative;
+  z-index: 1;
+  width: max-content;
+}
+
+.home-what-do-we-do-container-operation h2 {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.home-what-do-we-do-container-operation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.operation-text {
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.operation-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  width: 100%;
+  height: 10px; 
+  background-color: orange;
+  z-index: -1;
+}
+
+.home-what-do-we-do-container-operation-mobilize
+{
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  align-items: center;
+  padding: 1rem;
+}
+
+.circle-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #297EEB; /* Blue color for the circle */
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.home-what-do-we-do-container-operation-arrow,
+.home-what-do-we-do-container-operation-arrow-inverted {
+  background-image: url('../../assets/image/arrow.png');
+  background-size:auto;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 100px;
+}
+
+.home-map-container h2 {
+  overflow: hidden;
+}
+
+.home-what-do-we-do-container-operation-arrow-inverted {
+  transform: rotateY(180deg);
+}
+
+.home-what-do-we-do-container-operation-mobilize-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-what-do-we-do-container-operation-mobilize-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.home-what-do-we-do-container-operation-mobilize-invisible {
+  visibility: hidden;
+}
+
+.home-what-do-we-do-container-operation-mobilize-outer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.read-more {
+  padding: 14px 18px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, #F79F2D 0%, #F79F2D 100%), linear-gradient(180deg, rgba(0, 101, 255, 0.00) 0%, #2684FF 100%), #4C9AFF;
+    border: none;
+    stroke: none;
+    color: #fff;
+    width: max-content;
+    margin-top: 2%;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    margin-left: 45%;
+}
+
 .home-what-do-we-do-container h1 {
   text-align: center;
-  font-family: Tiro Devanagari Hindi;
   font-size: 50px;
   font-weight: 400;
 }
@@ -251,16 +465,10 @@
   transform: translate(-1500%, -62%) rotate(90deg);
 }
 
-.home-partners-container {
+.home-map-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  margin-top: 5%;
-  background-image: url("https://www.dbs.com/documents/portlet_file_entry/297834311/article181-main.jpg/3b7279a2-7740-8658-5c49-c0de33559859");
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center;
-  padding: 2%;
 }
 
 .home-our-partners-container {
@@ -311,6 +519,8 @@
   text-align: center;
   justify-content: space-evenly;
   padding: 2%;
+  width: 100%;
+  background-color: #F79F2D;
   margin-top: 1rem;
 }
 
