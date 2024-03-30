@@ -28,6 +28,16 @@ const Blog = () => {
       headline: 'Breaking Gender Stereotypes: Women Empowerment in the Workplace',
       image: 'https://yt3.googleusercontent.com/1gqbSfw-0TPbv04FS0URu-Ri_Vp-U4xoYfCiJdY7MVDLtuyoSD3znel6sxqMtnaBz9zVg3Xo=s900-c-k-c0x00ffffff-no-rj',
     },
+    {
+      link: 'https://www.news18.com/news/opinion/from-capacity-to-capability-bringing-more-women-in-logistics-and-transport-4844723.html',
+      headline: 'From Capacity to Capability: Bringing More Women in Logistics and Transport',
+      image: 'https://www.adgully.com/img/800/201811/news18-network.jpg'
+    },
+    {
+      link: 'https://timesofindia.indiatimes.com/readersblog/yogeshspeaks/bringing-more-women-on-drivers-seat-42972/',
+      headline: 'Bringing more women on driver’s seat',
+      image: 'https://static.toiimg.com/photo/75476733.cms'
+    }
     // {
     //   link: 'https://viralvilla.co/en/a-startup-in-delhi-hires-women-for-deliverly-of-goods/',
     //   headline: 'Delhi Startup Empowers Women Through Delivery Services',
