@@ -10,6 +10,13 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className='footer-container'>
       <div>
@@ -29,11 +36,11 @@ const Footer = () => {
       </div>
       <div className='footer-container-quick'>
         <h3>Quick Links</h3>
-        <Link to='/' className='footer-container-link'>Home</Link>
-        <Link to='/about' className='footer-container-link'>About</Link>
-        <Link to='/service' className='footer-container-link'>Services</Link>
-        <Link to='/blog' className='footer-container-link'>Blog</Link>
-        <Link to='/contact' className='footer-container-link'>Contact</Link>
+        <Link to='/' className='footer-container-link' onClick={scrollToTop}>Home</Link>
+        <Link to='/about' className='footer-container-link' onClick={scrollToTop}>About</Link>
+        <Link to='/service' className='footer-container-link' onClick={scrollToTop}>Services</Link>
+        <Link to='/blog' className='footer-container-link' onClick={scrollToTop}>Blog</Link>
+        <Link to='/contact' className='footer-container-link' onClick={scrollToTop}>Contact</Link>
       </div>
       <div>
         <h3>Follow Us</h3>

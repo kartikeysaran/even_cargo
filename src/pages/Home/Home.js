@@ -18,9 +18,11 @@ import mobilize from '../../assets/image/mobilize.png'
 import retrain from '../../assets/image/retrain.png'
 import train from '../../assets/image/train.png'
 import employ from '../../assets/image/employ.png'
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+  const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
 
   // const quarters = [
@@ -42,6 +44,14 @@ const Home = () => {
     {id: 3, type: "Knowledge Partner", img: partnerKnowledge},
     {id: 4, type: "Resource Partner", img: partnerResource}
   ];
+
+  const handleClick = () => {
+    navigate('/service');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   //const [selectedQuarter, setSelectedQuarter] = useState(1);
 
@@ -132,7 +142,7 @@ const Home = () => {
           <div className='home-what-do-we-do-container-operation-mobilize'>
             <h2><span className='circle-number'>1</span> Mobilize</h2>
             <p>We identify and mobilize women from resource poor communities.....</p>
-            <button className='read-more'>Read More <FaArrowRight /></button>
+            <button className='read-more' onClick={handleClick}>Read More <FaArrowRight /></button>
           </div>
           </div>
           <div className='home-what-do-we-do-container-operation-mobilize-invisible'>
@@ -155,7 +165,7 @@ const Home = () => {
           <div className='home-what-do-we-do-container-operation-mobilize'>
             <h2><span className='circle-number'>2</span> Train</h2>
             <p>We do need assessment and prepare skill metrics to curate the training needs of women.......</p>
-            <button className='read-more'>Read More <FaArrowRight /></button>
+            <button className='read-more'  onClick={handleClick}>Read More <FaArrowRight /></button>
           </div></div>
         
         </div>
@@ -168,7 +178,7 @@ const Home = () => {
           <div className='home-what-do-we-do-container-operation-mobilize'>
             <h2><span className='circle-number'>3</span> Employ</h2>
             <p>We provide dignified employment to women in the logistics sector......</p>
-            <button className='read-more'>Read More <FaArrowRight /></button>
+            <button className='read-more' onClick={handleClick}>Read More <FaArrowRight /></button>
           </div>
           </div>
           <div className='home-what-do-we-do-container-operation-mobilize-invisible'>
@@ -189,9 +199,9 @@ const Home = () => {
           <div className='home-what-do-we-do-container-operation-mobilize-outer'>
             <img src={retrain}/>
           <div className='home-what-do-we-do-container-operation-mobilize right'>
-            <h2><span className='circle-number'>4</span> Retrain</h2>
+            <h2><span className='circle-number'>4</span> Retain</h2>
             <p>We work with women and address their workplace related concerns post-employment to ensure that they stay.....</p>
-            <button className='read-more'>Read More <FaArrowRight /></button>
+            <button className='read-more'  onClick={handleClick}>Read More <FaArrowRight /></button>
           </div>
           </div>
         </div>
