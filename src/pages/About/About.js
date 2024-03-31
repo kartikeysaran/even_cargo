@@ -25,13 +25,13 @@ const About = () => {
   ];
   const slides = [
     {
-      image:Important1
-    },
-    {
       image:Important2
     },
     {
       image:Important3
+    },
+    {
+      image:Important1
     },
   ];
   const [current, setCurrent] = useState(0);
