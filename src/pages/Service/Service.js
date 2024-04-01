@@ -48,7 +48,7 @@ const Service = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="392" height="570" viewBox="0 0 392 570" fill="none" className='service-container__header-svg2'>
           <path d="M5.64463 345.644C-10.6764 190.231 0.949287 30.6808 142.072 1.7764C283.194 -27.128 461.198 304.621 477.519 460.034C493.84 615.446 342.298 535.671 201.175 564.575C60.0531 593.48 21.9657 501.057 5.64463 345.644Z" fill="#FFF4F2" />
         </svg>
-        <h3>It is possible to achieve gender equity within our lifetime.</h3>
+        <h3>Discover the key features</h3>
         <div className='service-container__header_img-container'>
           <img src={Service1} alt='Service1' className='service-container__header_img1' />
           {/* <img src={Service2} alt='Service2' className='service-container__header_img2' />
@@ -56,7 +56,7 @@ const Service = () => {
         </div>
       </div>
       <div className='service-container__body'>
-        <h1 id='service-title_Discover'>Discover the Key Features</h1>
+        {/* <h1 id='service-title_Discover'>Discover the Key Features</h1> */}
         {keyFeatures.slice(0, 2).map((feature, index) => (
           <div className="service-container__body-item" key={index} id={`quarter${index + 1}Scroll`}>
             <div className="service-container__body-text-container">

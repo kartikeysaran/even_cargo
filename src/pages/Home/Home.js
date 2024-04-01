@@ -113,10 +113,10 @@ const Home = () => {
         <div class='home-what-do-we-do-container-2-vision'>
           <h2>Vision</h2>
           <span>
-          We envision a <br/>
-          gender-inclusive society <br/>
-          by creating equal livelihood<br/>
-          opportunities for women.<br/>
+          We envision a 
+          gender-inclusive society 
+          by creating equal livelihood
+          opportunities for women.
           </span>
         </div>
         <div class='home-what-do-we-do-container-2-mission'>

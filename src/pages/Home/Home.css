@@ -105,16 +105,19 @@
   width: 100%;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   margin-top: 1rem;
   position: relative;
 }
 
 .home-what-do-we-do-container-2-mission::before {
   content: '';
-  background-image: url('../../assets/image/mission.png');
+  background-image: url('../../assets/image/vision.png');
   background-size: cover;
   position: absolute;
+  background-position: center top -150px;
   top: 0;
   left: 0;
   width: 100%;
@@ -134,8 +137,10 @@
 
 .home-what-do-we-do-container-2-vision::before {
   content: '';
-  background-image: url('../../assets/image/vision.png');
-  background-size: cover;
+  background-image: url('../../assets/image/IMG_1300.JPG');
+  background-position: center top -150px;
+  background-size:cover;
+  background-repeat:no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -159,44 +164,66 @@
   color: white;
   position: relative; 
   animation: slideIn2 1s ease forwards;
-  width: 100%;
-  margin: 2rem;
+  width: 90%;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
 }
+
+.home-what-do-we-do-container-2-vision {
+  align-items: start;
+  border-radius: 2rem 2rem 0 0;
+}
+
 .home-what-do-we-do-container-2-vision h2 {
-  text-align: start;
+  /* text-align: start;
   background-color: #3375CF;
   width: min-content;
   padding-left: 10px;
   padding-right: 40px;
-  border-radius: 0 40px 40px 0 ;
+  border-radius: 0 40px 40px 0 ;*/
+  background-color: #3375CF;
+  width: min-content;
+  padding: 0 2rem 0 2rem;
+  
 }
 
 .home-what-do-we-do-container-2-vision span {
-  text-align: start;
+  /* text-align: start;
+  background-color: #3375CF; */
+  font-size: xx-large;
   background-color: #3375CF;
+  padding: 2rem;
 }
 
 .home-what-do-we-do-container-2-mission span {
-  text-align: start;
+  /* text-align: start;
   background-color: #F79F2D;
-  padding: 10px;
+  padding: 10px; */
+  font-size: xx-large;
+  background-color: #F79F2D;
+  padding: 2rem;
 }
 
 .home-what-do-we-do-container-2-mission {
   display: flex;
   flex-direction: column;
   align-items: end;
+  border-radius: 0 0 2rem 2rem;
 }
 
 .home-what-do-we-do-container-2-mission h2 {
-  text-align: end;
+  /* text-align: end;
   background-color: #F79F2D;
   padding-left: 40px;
   padding-right: 10px;
   width: min-content;
-  border-radius: 40px 0 0 40px ;
+  border-radius: 40px 0 0 40px ; */
+  background-color: #F79F2D;
+  width: min-content;
+  padding: 0 2rem 0 2rem;
 }
 
 .home-what-do-we-do-container-2-vision h2 ,
@@ -209,7 +236,6 @@
 .home-what-do-we-do-container-2-mission span{
   position: relative;
   z-index: 1;
-  width: max-content;
 }
 
 .home-what-do-we-do-container-operation h2 {
