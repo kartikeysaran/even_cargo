@@ -46,6 +46,10 @@
         padding: 0;
     }
 
+    .blog-container h1 {
+        margin-top: 10rem;
+    }
+
     .blog-container a {
         flex-direction: column;
         margin: 0;
@@ -57,7 +61,7 @@
         width: 100%;
        color: #000; 
        text-align: center;
-       font-size: 25px;
+       font-size: 1.2rem;
        margin-left: 0;
     }
 

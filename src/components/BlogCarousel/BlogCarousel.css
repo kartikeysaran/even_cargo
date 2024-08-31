@@ -1,4 +1,5 @@
 .carousel-container {
+  width: 100%;
 }
 
 .carousel-slide a {
@@ -7,7 +8,7 @@
   overflow: hidden;
   justify-content: space-evenly;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem; /* Adjusted for better spacing on mobile */
   padding: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -15,78 +16,49 @@
 }
 
 .carousel-slide h4 {
-  width: 50%;
- color: #000; 
- text-align: left;
- margin-left: 2rem;
+  width: 90%; /* Adjusted to fit mobile screens */
+  color: #000; 
+  text-align: center; /* Centered for mobile */
+  margin: 0.5rem 0; /* Adjusted for better spacing */
 }
-
-.carousel-slide h2:hover {
-  color: #808080;
-}
-
 
 .carousel-slide img {
-  width: 20vw;
-  height: 10vh;
+  width: 90%; /* Adjusted to fit mobile screens */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 20px;
 }
 
 .carousel-slide {
-  padding-top: 2rem;
+  padding-top: 1rem; /* Adjusted for better spacing on mobile */
 }
-
-.active-slide a {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  text-decoration: none;
-}
-
-.active-slide  h4 {
-  width: 50%;
- color: #000; 
- text-align: left;
- margin-left: 2rem;
-}
-
-.active-slide h2:hover {
-  color: #808080;
-}
-
 
 .active-slide img {
-  width: 30vw;
-  height: 20vh;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.slick-dots {
-  bottom: 20px; 
-}
-
-.slick-dots li button:before {
-  font-size: 10px; 
-  color: #297EEB; 
-}
-
-.slick-dots li.slick-active button:before {
-  color: #FFA500; 
+  width: 100%; /* Adjusted to fit mobile screens */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .slick-slider {
   margin: 0 auto;
-  width: 80%; 
+  width: 100%;
   overflow: hidden;
 }
 
 .slick-list {
-  overflow: visible; 
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide a {
+    margin: 0.5rem; /* Adjusted spacing for smaller screens */
+    padding: 0.5rem; /* Adjusted padding for smaller screens */
+  }
+
+  .carousel-slide h4 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .carousel-slide img {
+    width: 100%; /* Full width for mobile */
+  }
 }

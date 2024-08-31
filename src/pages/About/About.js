@@ -170,7 +170,7 @@ const About = () => {
         <h5>{storyText}</h5>
         {showReadMore && <button onClick={handleReadMore}>Read More <FaArrowRight /></button>}
       </div>
-      <div className='spacer'/>
+      {/*<div className='spacer'/>
       <div className='about-container-our-journey'>
         <h2>The Journey</h2>
         <VerticalTimeline>
@@ -188,7 +188,7 @@ const About = () => {
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
-      </div>
+      </div> */}
       <div className='spacer'/>
       <svg xmlns="http://www.w3.org/2000/svg" width="534" height="414" viewBox="0 0 534 414" fill="none" className='about-container-pink-clouds2'>
         <path d="M175.269 37.2435C313.971 -5.45531 463.283 -28.525 524.209 69.0108C585.136 166.547 323.946 362.443 185.244 405.142C46.5415 447.841 82.851 321.173 21.9244 223.637C-39.0022 126.101 36.5669 79.9423 175.269 37.2435Z" fill="#FFF4F2"/>

@@ -31,7 +31,7 @@ const Contact = () => {
 
           <div>
             {/* Updated dropdown with placeholder */}
-            <select id="lookingFor" name="lookingFor">
+            <select id="lookingFor" name="lookingFor" className='select-form'>
               <option value="" disabled selected hidden>
                 What are you looking for?
               </option>
@@ -41,7 +41,7 @@ const Contact = () => {
             </select>
           </div>
 
-          <div>
+          <div className='text-area'>
             <textarea id="message" name="message" rows="4" placeholder='Message'/>
           </div>
           <button type='submit'>Submit <FaArrowRight /></button>

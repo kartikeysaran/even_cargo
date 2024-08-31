@@ -80,9 +80,9 @@ const Service = () => {
             </div>
           </div>
         ))}
-        <div className='service-container__barchart'>
+        {/* <div className='service-container__barchart'>
           <BarChart data={employmentData} />
-        </div>
+        </div> */}
         {keyFeatures.slice(3, 4).map((feature, index) => (
           <div className="service-container__body-item" key={index}>
             <div className="service-container__body-text-container">

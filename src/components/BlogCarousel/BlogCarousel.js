@@ -1,6 +1,6 @@
 import './BlogCarousel.css'; 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -78,13 +78,22 @@ const BlogCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: window.innerWidth < 768 ? 1 : 3,  // Show 1 slide on small screens, 3 on larger screens
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    beforeChange: (current, next) => setCurrentIndex(next+1),
-    pauseOnHover: false
+    beforeChange: (current, next) => setCurrentIndex(next + 1),
+    pauseOnHover: false,
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCurrentIndex(0);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="carousel-container">

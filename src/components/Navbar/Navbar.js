@@ -39,17 +39,17 @@ const Navbar = () => {
       {showMenu && (
         <div className="popup-menu">
           <div className="popup-menu-content">
-            <IoMdClose onClick={toggleMenu} className='menu-icon'/>
-            <Link to="/" onClick={() => {toggleMenu(); scrollToTop();}}>Home</Link>
-            <Link to="/about" onClick={() => {toggleMenu(); scrollToTop();}}>About</Link>
-            <Link to="/service" onClick={() => {toggleMenu(); scrollToTop();}}>Service</Link>
-            <Link to="/blog" onClick={() => {toggleMenu(); scrollToTop();}}>Blog</Link>
-            <Link to="/contact" onClick={() => {toggleMenu(); scrollToTop();}}>Contact</Link>
+            <IoMdClose onClick={toggleMenu} className="close-icon" />
+            <Link to="/" onClick={() => { toggleMenu(); scrollToTop(); }}>Home</Link>
+            <Link to="/about" onClick={() => { toggleMenu(); scrollToTop(); }}>About</Link>
+            <Link to="/service" onClick={() => { toggleMenu(); scrollToTop(); }}>Service</Link>
+            <Link to="/blog" onClick={() => { toggleMenu(); scrollToTop(); }}>Blog</Link>
+            <Link to="/contact" onClick={() => { toggleMenu(); scrollToTop(); }}>Contact</Link>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Navbar;

@@ -197,4 +197,51 @@
     .mentor-about {
       width: 100%;
     }
+
+    .about-container h1 {
+      font-size: 1.5rem;
+      margin-top: 10rem;
+    }
+    .about-container-rect {
+      display: none;
+    }
+
+    .about-container-our-story h2 {
+      font-size: 1.5rem;
+    }
+
+    .about-container-our-story h5 {
+      font-size: 1rem;
+    }
+
+    .about-container-our-story button {
+      margin-left: 0;
+    }
+
+    .about-container h2 {
+      font-size: 1.5rem;
+    }
+
+    .team-container {
+      align-items: center;
+    }
+
+    .team-member-name{
+      font-size: 1rem;
+    }
+
+    .team-member-position{
+      font-size: 1rem;
+    }
+    .team-member-card button {
+      font-size: 1rem;
+    }
+
+    .about-container-pink-clouds,
+    .about-container-pink-clouds2 {
+      display: none;
+    }
+
+  
+    
   }

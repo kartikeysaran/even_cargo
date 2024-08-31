@@ -101,11 +101,13 @@ const Home = () => {
       </div>
       <div className='home-what-do-we-do-container'>
         <img src={deliveryTeam} alt="Delivery Team" />
-        <h2 style={{ textAlign: 'start', marginLeft: '5rem', color: 'white' }}>
+        <h2 style={{ color: 'white' }}>
           India’s first <br />
-          <span style={{ color: '#F79F2D' }}>Women - Driven <br />
-          logistics company <br /></span>
-          Creating equal work <br />opportunities for <br />Women.
+          <span style={{ color: '#F79F2D' }}>
+            Women - Driven <br />
+            logistics company <br />
+          </span>
+          Creating equal work <br /> opportunities for <br /> Women.
         </h2>
       </div>
 
@@ -243,7 +245,7 @@ const Home = () => {
         <h2>
           <span className="operation-text">Even Carg</span>o Presence
         </h2>
-        <img style={{ background: 'rgba(255, 255, 255, 0.8)', height: '100%', width:'35%'}} src={IndianMap} alt='indian-map' />
+        <img src={IndianMap} alt='indian-map' />
         <div>
           {/* <h1>Our Partners</h1>
           <img src='' alt='partners' style={{ transform: 'scaleX(-1)' }}/> */}
