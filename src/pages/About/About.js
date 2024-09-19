@@ -9,6 +9,11 @@ import yogesh from '../../assets/team/yogesh.png'
 import shivani from '../../assets/team/shivani.jpg'
 import srishti from '../../assets/team/srishti.jpg'
 import mubeena from '../../assets/team/mubeena.jpg'
+import prerna from '../../assets/team/prerna.jpg'
+import shailja from '../../assets/team/shailja.jpg'
+import diksha from '../../assets/team/diksha.jpg'
+import somya from '../../assets/team/somya.jpg'
+import rijul from '../../assets/team/rijul.jpg'
 
 import satyajit from '../../assets/mentors/satyajit.png'
 import karen from '../../assets/mentors/karen.png'
@@ -73,32 +78,73 @@ const About = () => {
       name: 'Priyanka Yadav',
       img: priyanka,
       position: 'Operations-Manager',
+      about_more: 'With over seven years of experience, Priyanka leads operations at Even Cargo, overseeing efficient logistics and ensuring smooth processes across the organization. In her free time, she enjoys spending quality time with her two daughters, embracing family moments outside of her professional life.'
+      ,about: 'With over seven years of experience, Priyanka leads operations at Even Cargo, overseeing efficient logistics and ensuring smooth processes across the organization...'
     },
     {
-      name: 'Srishti Prateek',
-      img: srishti,
-      position: 'Business research (finances)',
+      name: 'Prerna Kaushik',
+      img: prerna,
+      position: 'Strategy & Operations',
+      about_more: 'A Management Post Graduate with over two years of expertise in HR operations, Prerna brings her adeptness in enhancing employee experiences, streamlining HR processes, and overseeing payroll administration to Even Cargo. Passionate about learning from the defense forces, she also enjoys exploring new destinations, indulging in music, and discovering new cultures through travel.'
+      ,about: 'A Management Post Graduate with over two years of expertise in HR operations, Prerna brings her adeptness in enhancing employee experiences, streamlining HR...'
     },
     {
-      name: 'Labiba Sadiq',
-      img: labiba,
-      position: 'Human Resources',
+      name: 'Shailja Joshi',
+      img: shailja,
+      position: 'Strategy & Operations',
+      about_more: 'Shailja is part of the partnership and communications team at Even Cargo. A Business and Entrepreneurship graduate from TU Dublin, she brings over four years of experience working in partnership development and marketing roles. Passionate about travel, she enjoys exploring India\'s rich diversity and has a keen interest in regional folktales and mythology, blending her love for storytelling with her professional journey.'
+      ,about: 'Shailja is part of the partnership and communications team at Even Cargo. A Business and Entrepreneurship graduate from TU Dublin, she brings over four year...'
     },
     {
-      name: 'Shivani Attri',
-      img: shivani,
-      position: 'Community engagement & partnership',
+      name: 'Diksha Bhardwaj',
+      img: diksha,
+      position: 'Strategy & Operations',
+      about_more: 'A graduate of the Tata Institute of Social Sciences (TISS), Diksha brings four years of experience in the social impact sector, specializing in community engagement and partnership development. Her experience and expertise contribute to driving meaningful change at Even Cargo. Beyond her professional work, Diksha is deeply passionate about animal welfare, enjoys immersing herself in music, and loves to explore new destinations through travel.',
+      about: 'A graduate of the Tata Institute of Social Sciences (TISS), Diksha brings four years of experience in the social impact sector, specializing in community ...'
     },
     {
-      name: 'Mubeena Hussain',
-      img: mubeena,
-      position: 'Business research (policies)',
+      name: 'Somya Jain',
+      img: somya,
+      position: 'Strategy & Operations',
+      about_more: 'A recent commerce graduate with a strong passion for finance, Somya is eager to apply her financial expertise to further the mission of Even Cargo in promoting gender equity. Her dedication to using her skills for a greater cause reflects her commitment to driving positive change through her work',
+      about: 'A recent commerce graduate with a strong passion for finance, Somya is eager to apply her financial expertise to further the mission of Even Cargo...'
+    },
+    {
+      name: 'Rijul Dharnia',
+      img: rijul,
+      position: 'Strategy & Operations',
+      about_more: '',
+      about: 'Operations Team'
     },
     {
       name: 'Yogesh Kumar',
       img: yogesh,
-      position: 'Strategy & Operations',
+      position: 'Director',
+      about: 'Director',
+      about_more: ''
     },
+    // {
+    //   name: 'Srishti Prateek',
+    //   img: srishti,
+    //   position: 'Business research (finances)',
+    // },
+    // {
+    //   name: 'Labiba Sadiq',
+    //   img: labiba,
+    //   position: 'Human Resources',
+    // },
+    // {
+    //   name: 'Shivani Attri',
+    //   img: shivani,
+    //   position: 'Community engagement & partnership',
+    // },
+    // {
+    //   name: 'Mubeena Hussain',
+    //   img: mubeena,
+    //   position: 'Business research (policies)',
+    // },
+    
+  
   ]
 
   const mentors = [
@@ -123,9 +169,17 @@ const About = () => {
   ]
 
   const [showMoreAboutMentor, setShowMoreAboutMentor] = useState({});
+  const [showMoreAboutTeam, setShowMoreAboutTeam] = useState({});
 
   const handleToggleAboutMentor = (index) => {
     setShowMoreAboutMentor((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const handleToggleAboutTeam = (index) => {
+    setShowMoreAboutTeam((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
@@ -196,19 +250,61 @@ const About = () => {
       <h2>Our Team</h2>
       <div className="team-container">
         {teamMembers.slice(0, 3).map((member, index) => (
-          <div key={index} className="team-member-card-2">
+          // <div key={index} className="team-member-card-2">
+          //   <img src={member.img} alt={member.name} className="team-member-image" />
+          //   <h4 className="team-member-name">{member.name}</h4>
+          //   {/* <p className="team-member-position">{member.position}</p> */}
+          //   <p className="mentor-about">{member.details}</p>
+          // </div>
+          <div key={index} className="team-member-card">
             <img src={member.img} alt={member.name} className="team-member-image" />
             <h4 className="team-member-name">{member.name}</h4>
-            <p className="team-member-position">{member.position}</p>
+            <p className="mentor-about">
+              {showMoreAboutTeam[index] ? member.about_more : member.about}
+            </p>
+            <button onClick={() => handleToggleAboutTeam(index)}>
+              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
+            </button>
           </div>
         ))}
       </div>
       <div className="team-container">
-        {teamMembers.slice(3, 6).map((member, index) => (
+        {teamMembers.slice(3, 5).map((member, index) => (
+          // <div key={index} className="team-member-card">
+          //   <img src={member.img} alt={member.name} className="team-member-image" />
+          //   <h4 className="team-member-name">{member.name}</h4>
+          //   {/* <p className="team-member-position">{member.position}</p> */}
+          //   <p className="mentor-about">{member.details}</p>
+          // </div>
           <div key={index} className="team-member-card">
             <img src={member.img} alt={member.name} className="team-member-image" />
             <h4 className="team-member-name">{member.name}</h4>
-            <p className="team-member-position">{member.position}</p>
+            <p className="mentor-about">
+              {showMoreAboutTeam[index] ? member.about_more : member.about}
+            </p>
+            <button onClick={() => handleToggleAboutTeam(index)}>
+              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="team-container">
+        {teamMembers.slice(5,9).map((member, index) => (
+          // <div key={index} className="team-member-card">
+          //   <img src={member.img} alt={member.name} className="team-member-image" />
+          //   <h4 className="team-member-name">{member.name}</h4>
+          //   {/* <p className="team-member-position">{member.position}</p> */}
+          //   <p className="mentor-about">{member.details}</p>
+          // </div>
+          <div key={index} className="team-member-card">
+            <img src={member.img} alt={member.name} className="team-member-image" />
+            <h4 className="team-member-name">{member.name}</h4>
+            <p className="mentor-about">
+              {showMoreAboutTeam[index] ? member.about_more : member.about}
+            </p>
+            {/* <button onClick={() => handleToggleAboutTeam(index)}>
+              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
+            </button> */}
           </div>
         ))}
       </div>
