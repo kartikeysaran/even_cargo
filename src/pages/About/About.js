@@ -120,7 +120,7 @@ const About = () => {
       name: 'Yogesh Kumar',
       img: yogesh,
       position: 'Director',
-      about: 'Director',
+      about: 'Director - Strategy and Operations',
       about_more: ''
     },
     // {
