@@ -50,6 +50,16 @@ const About = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  const handleImageClick = (member) => {
+    setSelectedMember(member);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedMember(null);
+  };
+
   const journeyData = [
     {
       date: '2016',
@@ -77,74 +87,53 @@ const About = () => {
     {
       name: 'Priyanka Yadav',
       img: priyanka,
-      position: 'Operations-Manager',
+      position: '',
       about_more: 'With over seven years of experience, Priyanka leads operations at Even Cargo, overseeing efficient logistics and ensuring smooth processes across the organization. In her free time, she enjoys spending quality time with her two daughters, embracing family moments outside of her professional life.'
       ,about: 'With over seven years of experience, Priyanka leads operations at Even Cargo, overseeing efficient logistics and ensuring smooth processes across the organization...'
     },
     {
       name: 'Prerna Kaushik',
       img: prerna,
-      position: 'Strategy & Operations',
+      position: '',
       about_more: 'A Management Post Graduate with over two years of expertise in HR operations, Prerna brings her adeptness in enhancing employee experiences, streamlining HR processes, and overseeing payroll administration to Even Cargo. Passionate about learning from the defense forces, she also enjoys exploring new destinations, indulging in music, and discovering new cultures through travel.'
       ,about: 'A Management Post Graduate with over two years of expertise in HR operations, Prerna brings her adeptness in enhancing employee experiences, streamlining HR...'
     },
     {
       name: 'Shailja Joshi',
       img: shailja,
-      position: 'Strategy & Operations',
+      position: '',
       about_more: 'Shailja is part of the partnership and communications team at Even Cargo. A Business and Entrepreneurship graduate from TU Dublin, she brings over four years of experience working in partnership development and marketing roles. Passionate about travel, she enjoys exploring India\'s rich diversity and has a keen interest in regional folktales and mythology, blending her love for storytelling with her professional journey.'
       ,about: 'Shailja is part of the partnership and communications team at Even Cargo. A Business and Entrepreneurship graduate from TU Dublin, she brings over four year...'
     },
     {
       name: 'Diksha Bhardwaj',
       img: diksha,
-      position: 'Strategy & Operations',
+      position: '',
       about_more: 'A graduate of the Tata Institute of Social Sciences (TISS), Diksha brings four years of experience in the social impact sector, specializing in community engagement and partnership development. Her experience and expertise contribute to driving meaningful change at Even Cargo. Beyond her professional work, Diksha is deeply passionate about animal welfare, enjoys immersing herself in music, and loves to explore new destinations through travel.',
       about: 'A graduate of the Tata Institute of Social Sciences (TISS), Diksha brings four years of experience in the social impact sector, specializing in community ...'
     },
     {
       name: 'Somya Jain',
       img: somya,
-      position: 'Strategy & Operations',
+      position: '',
       about_more: 'A recent commerce graduate with a strong passion for finance, Somya is eager to apply her financial expertise to further the mission of Even Cargo in promoting gender equity. Her dedication to using her skills for a greater cause reflects her commitment to driving positive change through her work',
       about: 'A recent commerce graduate with a strong passion for finance, Somya is eager to apply her financial expertise to further the mission of Even Cargo...'
     },
     {
       name: 'Rijul Dharnia',
       img: rijul,
-      position: 'Strategy & Operations',
+      position: '',
       about_more: '',
       about: 'Operations Team'
     },
     {
       name: 'Yogesh Kumar',
       img: yogesh,
-      position: 'Director',
+      position: 'Founder',
       about: 'Director - Strategy and Operations',
       about_more: ''
     },
-    // {
-    //   name: 'Srishti Prateek',
-    //   img: srishti,
-    //   position: 'Business research (finances)',
-    // },
-    // {
-    //   name: 'Labiba Sadiq',
-    //   img: labiba,
-    //   position: 'Human Resources',
-    // },
-    // {
-    //   name: 'Shivani Attri',
-    //   img: shivani,
-    //   position: 'Community engagement & partnership',
-    // },
-    // {
-    //   name: 'Mubeena Hussain',
-    //   img: mubeena,
-    //   position: 'Business research (policies)',
-    // },
-    
-  
+
   ]
 
   const mentors = [
@@ -198,7 +187,7 @@ const About = () => {
   return (
     <div className='about-container'>
       <h1>Pitfalls of the status quo</h1>
-      <div className='about-container-rect'></div>
+      {/* <div className='about-container-rect'></div> */}
       <div className='home-why-is-it-important-container__container-image'>
           <FaArrowCircleLeft onClick={prevSlide} style={{cursor:'pointer'}}/>
           {slides.map((slide, index) => {
@@ -224,106 +213,81 @@ const About = () => {
         <h5>{storyText}</h5>
         {showReadMore && <button onClick={handleReadMore}>Read More <FaArrowRight /></button>}
       </div>
-      {/*<div className='spacer'/>
-      <div className='about-container-our-journey'>
-        <h2>The Journey</h2>
-        <VerticalTimeline>
-          {journeyData.map((item, index) => (
-            <VerticalTimelineElement
-              key={index}
-              date={item.date}
-              dateClassName="date-class"  // Add this line to apply the date class
-              iconStyle={{ background: '#F79F2D', color: '#fff' }}
-              icon={<i className="fas fa-briefcase"></i>}
-          > 
-              <p>{item.date}</p>
-              <h3 className="vertical-timeline-element-title">{item.event}</h3>
-              <p>{item.description}</p>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
-      </div> */}
       <div className='spacer'/>
       <svg xmlns="http://www.w3.org/2000/svg" width="534" height="414" viewBox="0 0 534 414" fill="none" className='about-container-pink-clouds2'>
         <path d="M175.269 37.2435C313.971 -5.45531 463.283 -28.525 524.209 69.0108C585.136 166.547 323.946 362.443 185.244 405.142C46.5415 447.841 82.851 321.173 21.9244 223.637C-39.0022 126.101 36.5669 79.9423 175.269 37.2435Z" fill="#FFF4F2"/>
       </svg>
       <h2>Our Team</h2>
       <div className="team-container">
-        {teamMembers.slice(0, 3).map((member, index) => (
-          // <div key={index} className="team-member-card-2">
-          //   <img src={member.img} alt={member.name} className="team-member-image" />
-          //   <h4 className="team-member-name">{member.name}</h4>
-          //   {/* <p className="team-member-position">{member.position}</p> */}
-          //   <p className="mentor-about">{member.details}</p>
-          // </div>
-          <div key={index} className="team-member-card">
+        {teamMembers.slice(0, 4).map((member, index) => (
+          <div key={index} className="team-member-card" onClick={() => handleImageClick(member)}>
             <img src={member.img} alt={member.name} className="team-member-image" />
             <h4 className="team-member-name">{member.name}</h4>
-            <p className="mentor-about">
+            {/* <p className="mentor-about">
               {showMoreAboutTeam[index] ? member.about_more : member.about}
             </p>
             <button onClick={() => handleToggleAboutTeam(index)}>
-              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
-            </button>
-          </div>
-        ))}
-      </div>
-      <div className="team-container">
-        {teamMembers.slice(3, 5).map((member, index) => (
-          // <div key={index} className="team-member-card">
-          //   <img src={member.img} alt={member.name} className="team-member-image" />
-          //   <h4 className="team-member-name">{member.name}</h4>
-          //   {/* <p className="team-member-position">{member.position}</p> */}
-          //   <p className="mentor-about">{member.details}</p>
-          // </div>
-          <div key={index} className="team-member-card">
-            <img src={member.img} alt={member.name} className="team-member-image" />
-            <h4 className="team-member-name">{member.name}</h4>
-            <p className="mentor-about">
-              {showMoreAboutTeam[index] ? member.about_more : member.about}
-            </p>
-            <button onClick={() => handleToggleAboutTeam(index)}>
-              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
-            </button>
-          </div>
-        ))}
-      </div>
-      <div className="team-container">
-        {teamMembers.slice(5,9).map((member, index) => (
-          // <div key={index} className="team-member-card">
-          //   <img src={member.img} alt={member.name} className="team-member-image" />
-          //   <h4 className="team-member-name">{member.name}</h4>
-          //   {/* <p className="team-member-position">{member.position}</p> */}
-          //   <p className="mentor-about">{member.details}</p>
-          // </div>
-          <div key={index} className="team-member-card">
-            <img src={member.img} alt={member.name} className="team-member-image" />
-            <h4 className="team-member-name">{member.name}</h4>
-            <p className="mentor-about">
-              {showMoreAboutTeam[index] ? member.about_more : member.about}
-            </p>
-            {/* <button onClick={() => handleToggleAboutTeam(index)}>
               {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
             </button> */}
           </div>
         ))}
       </div>
+      <div className="team-container">
+        {teamMembers.slice(4, 8).map((member, index) => (
+          <div key={index} className="team-member-card" onClick={() => handleImageClick(member)}>
+            <img src={member.img} alt={member.name} className="team-member-image" />
+            <h4 className="team-member-name">{member.name}</h4>
+            {/* <p className="mentor-about">
+              {showMoreAboutTeam[index] ? member.about_more : member.about}
+            </p>
+            <button onClick={() => handleToggleAboutTeam(index)}>
+              {showMoreAboutTeam[index] ? 'Read Less' : 'Read More'}
+            </button> */}
+          </div>
+        ))}
+      </div>
+      {/* <div className="team-container">
+        {teamMembers.slice(5,9).map((member, index) => (
+          
+          <div key={index} className="team-member-card" onClick={() => handleImageClick(member)}>
+            <img src={member.img} alt={member.name} className="team-member-image" />
+            <h4 className="team-member-name">{member.name}</h4>
+            
+          </div>
+        ))}
+      </div> */}
       <div className='spacer'/>
       <h2>Our Advisors</h2>
       <div className="team-container">
         {mentors.map((member, index) => (
-          <div key={index} className="team-member-card">
+          <div key={index} className="team-member-card" onClick={() => handleImageClick(member)}>
             <img src={member.img} alt={member.name} className="team-member-image" />
             <h4 className="team-member-name">{member.name}</h4>
-            <p className="mentor-about">
+            {/* <p className="mentor-about">
               {showMoreAboutMentor[index] ? member.about_more : member.about}
             </p>
             <button onClick={() => handleToggleAboutMentor(index)}>
               {showMoreAboutMentor[index] ? 'Read Less' : 'Read More'}
-            </button>
+            </button> */}
           </div>
         ))}
       </div>
+      {/* Popup for team member details */}
+      {selectedMember && (
+        <div className='popup'>
+          <div className='popup-inner'>
+            <div className='popup-header'>
+              <img src={selectedMember.img} alt={selectedMember.name} className='popup-image' />
+              <div className='popup-title'>
+                <h4>{selectedMember.name}</h4>
+                <h6 className='popup-role'>{selectedMember.position}</h6>
+              </div>
+            </div>
+            <button className='close-btn' onClick={handleClosePopup}>x</button>
+            <p>{selectedMember.about_more}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

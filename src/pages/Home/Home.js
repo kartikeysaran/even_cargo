@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect} from 'react'
 import './Home.css'
 import { IoCloseCircle } from "react-icons/io5";
 // import Important1 from '../../assets/important-1.jpeg';
@@ -18,12 +18,28 @@ import mobilize from '../../assets/image/mobilize.png'
 import retrain from '../../assets/image/retrain.png'
 import train from '../../assets/image/train.png'
 import employ from '../../assets/image/employ.png'
+import popupImage from '../../assets/image/popupImage.jpeg'
 import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
+
+  const [showFirstPopup, setShowFirstPopup] = useState(false);
+
+  useEffect(() => {
+    setShowFirstPopup(true);
+    // const hasSeenPopup = localStorage.getItem('hasSeenPopup');
+    // if (!hasSeenPopup) {
+    //   setShowFirstPopup(true);
+    //   localStorage.setItem('hasSeenPopup', 'true'); 
+    // }
+  }, []);
+
+  const closeFirstPopup = () => {
+    setShowFirstPopup(false);
+  };
 
   // const quarters = [
   //   { id: 1, name: 'Mobilization', info: 'Our priority is to identify and mobilize women belonging to resource-poor communities. There is enough evidence that points...' },
@@ -274,6 +290,23 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+      {showFirstPopup && (
+        <div className="popup-first">
+          <img src={popupImage} alt="Popup" style={{ width: '100%', height: 'auto', margin: 0, padding: 0 }} />
+          <a
+            href="https://www.youtube.com/watch?v=WzS-nYVRJmw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="story-button"
+          >
+            Check out our story!
+          </a>
+          <button className="later-button" onClick={closeFirstPopup}>
+            remind me later 
+          </button>
+        </div>
+      )}
     </div>
   )
 };

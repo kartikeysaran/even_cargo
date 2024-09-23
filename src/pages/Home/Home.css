@@ -68,8 +68,8 @@
 
 .popup {
   position: fixed;
-  width: 50dvw;
-  height: 60dvh;
+  width: 50%;
+  height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -573,6 +573,62 @@
   color: #ffc508;
 }
 
+.popup-first {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  padding: 1rem;
+}
+
+.popup-first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-first img {
+  margin: 0;
+  padding: 0;
+}
+
+.story-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.story-button:hover {
+  opacity: 0.8;
+}
+
+.later-button {
+  background: none;
+  color: gray;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.later-button:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .home-what-do-we-do_sub-container {
     display: flex;
@@ -758,6 +814,10 @@
   }
   .home-our-partners-container h1{
     font-size: 1.5rem;
+  }
+
+  .popup-first { 
+    width: 85%;
   }
 }
 
