@@ -165,7 +165,7 @@
     left: 30%;
   }
 
-  .popup {
+  .popup-about {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -178,7 +178,7 @@
     align-items: center;
   }
 
-  .popup img {
+  .popup-about img {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
@@ -186,7 +186,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .popup-inner {
+  .popup-about-inner {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -195,12 +195,12 @@
     position: relative;
   }
 
-  .popup-header {
+  .popup-about-header {
     display: flex;
 
   }
 
-  .popup-title {
+  .popup-about-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -208,21 +208,21 @@
     margin-left: 1rem;
   }
 
-  .popup-title h4 {
+  .popup-about-title h4 {
     font-size: 2rem;
     margin: 0;
     padding: 0;
   }
 
-  .popup-title h6 {
+  .popup-about-title h6 {
     font-size: 1rem;
 
   }
-  .popup-inner p {
+  .popup-about-inner p {
     text-align: start;
   }
 
-  .popup-role {
+  .popup-about-role {
     margin: 0;
     padding: 0;
     margin-top: 0.5rem;
@@ -247,7 +247,7 @@
   color: none;
 }
   
-  .popup-image {
+  .popup-about-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -336,7 +336,7 @@
     .about-container-pink-clouds2 {
       display: none;
     }
-    .popup-inner {
+    .popup-about-inner {
       width: 90dvw;
       margin: 1rem;
     }  

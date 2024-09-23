@@ -274,13 +274,13 @@ const About = () => {
       </div>
       {/* Popup for team member details */}
       {selectedMember && (
-        <div className='popup'>
-          <div className='popup-inner'>
-            <div className='popup-header'>
-              <img src={selectedMember.img} alt={selectedMember.name} className='popup-image' />
-              <div className='popup-title'>
+        <div className='popup-about'>
+          <div className='popup-about-inner'>
+            <div className='popup-about-header'>
+              <img src={selectedMember.img} alt={selectedMember.name} className='popup-about-image' />
+              <div className='popup-about-title'>
                 <h4>{selectedMember.name}</h4>
-                <h6 className='popup-role'>{selectedMember.position}</h6>
+                <h6 className='popup-about-role'>{selectedMember.position}</h6>
               </div>
             </div>
             <button className='close-btn' onClick={handleClosePopup}>x</button>
