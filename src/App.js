@@ -9,14 +9,12 @@ import ContactUs from './pages/Contact/Contact'
 import Service from './pages/Service/Service'
 import Footer from './components/Footer/Footer'
 import EvenCargoDashboard from './pages/Dashboard/EvenCargoDashboard';
+import GirlProfiles from './components/Dashboard/GirlProfiles';
 
 const AppContent = () => {
   const location = useLocation();
 
-  // Define routes where Navbar and Footer should be hidden
-  const hiddenLayoutRoutes = ['/dashboard'];
-
-  const shouldHideLayout = hiddenLayoutRoutes.includes(location.pathname);
+  const shouldHideLayout = location.pathname.startsWith('/dashboard');
 
   return (
     <div>
@@ -29,6 +27,7 @@ const AppContent = () => {
         <Route path="/blog" exact element={<Blog />} />
         <Route path="/service" exact element={<Service />} />
         <Route path="/dashboard" exact element={<EvenCargoDashboard />} />
+        <Route path="/dashboard/profiles" exact element={<GirlProfiles />} />
       </Routes>
       
       {!shouldHideLayout && <Footer />}
