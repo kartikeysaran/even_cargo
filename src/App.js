@@ -1,44 +1,79 @@
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+
+// Import Public-Facing Components
 import Navbar from './components/Navbar/Navbar';
-import Home from './pages/Home/Home'
-import AboutUs from './pages/About/About'
-import Blog from './pages/Blog/Blog'
-import ContactUs from './pages/Contact/Contact'
-import Service from './pages/Service/Service'
-import Footer from './components/Footer/Footer'
-import EvenCargoDashboard from './pages/Dashboard/EvenCargoDashboard';
-import GirlProfiles from './components/Dashboard/GirlProfiles';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import AboutUs from './pages/About/About';
+import ContactUs from './pages/Contact/Contact';
+import Blog from './pages/Blog/Blog';
+import Service from './pages/Service/Service';
 
+// Import Dashboard & Auth Components
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
+import EmployeeProfilesPage from './pages/EmployeeProfilesPage';
+import SignupPage from './pages/SignupPage';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
+
+// Wrapper for routes that require a user to be logged in
+function PrivateRoute({ children }) {
+    const { currentUser } = useAuth();
+    return currentUser ? children : <Navigate to="/login" />;
+}
+
+// Main component to handle layout and routing logic
 const AppContent = () => {
-  const location = useLocation();
+    const location = useLocation();
+    
+    // Hide Navbar and Footer on login and all dashboard routes
+    const shouldHideLayout = location.pathname === '/login' ||
+                             location.pathname === '/signup' ||
+                             location.pathname.startsWith('/dashboard') ||
+                             location.pathname.startsWith('/project');
 
-  const shouldHideLayout = location.pathname.startsWith('/dashboard');
+    return (
+        <div>
+            {!shouldHideLayout && <Navbar />}
+            
+            <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<ContactUs />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/service" element={<Service />} />
 
-  return (
-    <div>
-      {!shouldHideLayout && <Navbar />}
-      
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/about" exact element={<AboutUs />} />
-        <Route path="/contact" exact element={<ContactUs />} />
-        <Route path="/blog" exact element={<Blog />} />
-        <Route path="/service" exact element={<Service />} />
-        <Route path="/dashboard" exact element={<EvenCargoDashboard />} />
-        <Route path="/dashboard/profiles" exact element={<GirlProfiles />} />
-      </Routes>
-      
-      {!shouldHideLayout && <Footer />}
-    </div>
-  );
+                {/* Authentication Route */}
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+
+                {/* Protected Dashboard Routes */}
+                <Route 
+                    path="/dashboard" 
+                    element={<PrivateRoute><DashboardPage /></PrivateRoute>} 
+                />
+                <Route 
+                    path="/dashboard/profiles" 
+                    element={<PrivateRoute><EmployeeProfilesPage /></PrivateRoute>} 
+                />
+                <Route path="/project/:projectId" element={<ProjectDetailsPage />} />
+            </Routes>
+            
+            {!shouldHideLayout && <Footer />}
+        </div>
+    );
 };
 
+// The main App component wraps everything in providers
 const App = () => (
-  <Router>
-    <AppContent />
-  </Router>
+    <Router>
+        <AuthProvider>
+            <AppContent />
+        </AuthProvider>
+    </Router>
 );
 
 export default App;
